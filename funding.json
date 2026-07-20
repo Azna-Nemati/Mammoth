@@ -1,0 +1,68 @@
+{
+  "version": "v1.0.0",
+  "entity": {
+    "type": "individual",
+    "role": "maintainer",
+    "name": "Azna Nemati",
+    "email": "ananemati@gmail.com",
+    "description": "I am a cybersecurity student and the sole developer of Mammoth Blocker, a free and open-source privacy tool. I build software that protects everyday people from ads, trackers, fingerprinting, and online scams.",
+    "webpageUrl": {
+      "url": "https://mammothblocker.com"
+    }
+  },
+  "projects": [
+    {
+      "guid": "mammoth-blocker",
+      "name": "Mammoth Blocker",
+      "description": "Mammoth Blocker is a free, open-source, privacy-first browser extension built on Manifest V3. It blocks ads, trackers, third-party cookies, fingerprinting scripts, malware domains, and crypto-phishing sites, and shows users exactly which trackers tried to follow them. It is designed to be simple enough for non-technical people, such as parents and older relatives, to use safely.",
+      "webpageUrl": {
+        "url": "https://mammothblocker.com"
+      },
+      "repositoryUrl": {
+        "url": "https://github.com/Azna-Nemati/mammoth-extension"
+      },
+      "licenses": [
+        "spdx:MIT"
+      ],
+      "tags": [
+        "privacy",
+        "security",
+        "browser-extension",
+        "ad-blocker",
+        "anti-tracking",
+        "web"
+      ]
+    }
+  ],
+  "funding": {
+    "channels": [
+      {
+        "guid": "kofi",
+        "type": "other",
+        "address": "https://ko-fi.com/aznamammothblocker",
+        "description": "Ko-fi page for one-time and recurring supporter tips."
+      }
+    ],
+    "plans": [
+      {
+        "guid": "full-time-development",
+        "status": "active",
+        "name": "8 months of funded full-time development",
+        "description": "Funding to support 8 months of full-time development at 3000 USD per month. This covers the maintainer's dedicated working time to bring Mammoth Blocker from a working prototype to a published, audited extension available on all major browsers. Deliverables: (1) publish Mammoth Blocker to the Firefox Add-ons store, (2) publish to the Chrome Web Store, (3) publish to the Microsoft Edge Add-ons store, (4) complete security and effectiveness testing of the extension's blocking rules against real tracker and fingerprinting scripts, (5) reach the first cohort of real users across the three stores. Small hard costs (store registration fees, AI and development tooling subscriptions) are included within this amount.",
+        "amount": 24000,
+        "currency": "USD",
+        "frequency": "one-time"
+      },
+      {
+        "guid": "smaller-support",
+        "status": "active",
+        "name": "Partial development support",
+        "description": "Any partial funding directly extends the number of months the maintainer can work full-time on shipping and testing Mammoth Blocker.",
+        "amount": 3000,
+        "currency": "USD",
+        "frequency": "monthly"
+      }
+    ],
+    "history": []
+  }
+}
