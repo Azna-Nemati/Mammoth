@@ -48,7 +48,7 @@
         "guid": "full-time-development",
         "status": "active",
         "name": "8 months of funded full-time development",
-        "description": "Funding to support 8 months of full-time development at 3000 USD per month. This covers the maintainer's dedicated working time to bring Mammoth Blocker from a working prototype to a published, audited extension available on all major browsers. Deliverables: (1) publish Mammoth Blocker to the Firefox Add-ons store, (2) publish to the Chrome Web Store, (3) publish to the Microsoft Edge Add-ons store, (4) complete security and effectiveness testing of the extension's blocking rules against real tracker and fingerprinting scripts, (5) reach the first cohort of real users across the three stores. Small hard costs (store registration fees, AI and development tooling subscriptions) are included within this amount.",
+        "description": "8 months of full-time development at 3000 USD/month to take Mammoth Blocker from prototype to a published, tested extension on all major browsers. Deliverables: publish to Chrome Web Store, Firefox Add-ons, and Microsoft Edge Add-ons; complete security and effectiveness testing of the blocking rules against real tracker and fingerprinting scripts; and reach the first users across the three stores. Small hard costs (store fees, tooling subscriptions) are included.",
         "amount": 24000,
         "currency": "USD",
         "frequency": "one-time"
