@@ -3,68 +3,399 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Welcome to Mammoth Blocker</title>
-<meta name="description" content="Mammoth is installed. Here's how to get the most out of it.">
-<link rel="canonical" href="https://mammothblocker.com/welcome/">
+<title>Mammoth Blocker — Free ad blocker, tracker blocker and scam checker</title>
+<meta name="description" content="Mammoth Blocker is a free browser extension that blocks ads, trackers, fingerprinting, cryptominers and scam networks, and checks pages for scam signs. Runs on your device. No account. Nothing collected.">
+<link rel="canonical" href="https://mammothblocker.com/">
 <meta name="theme-color" content="#1d5038">
 <link rel="icon" type="image/png" href="/favicon.png">
-<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mammoth Blocker">
+<meta property="og:url" content="https://mammothblocker.com/">
+<meta property="og:title" content="Mammoth Blocker — Block ads. Stop trackers. Spot scams.">
+<meta property="og:description" content="Free ad and tracker blocker with a built-in scam check. Runs on your device. Nothing collected.">
+<meta property="og:image" content="https://mammothblocker.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mammoth Blocker">
+<meta name="twitter:description" content="Block ads. Stop trackers. Spot scams. Free, private, on your device.">
+<meta name="twitter:image" content="https://mammothblocker.com/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Source+Sans+3:wght@300;400;600&display=swap">
-<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Mammoth Blocker",
+  "applicationCategory": "BrowserApplication",
+  "operatingSystem": "Chrome, Edge, Brave, Opera, Firefox",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "url": "https://mammothblocker.com/",
+  "image": "https://mammothblocker.com/logo-512.png",
+  "description": "Free browser extension that blocks ads, trackers, fingerprinting, cryptominers and scam networks, and checks pages for scam signs, all on your device."
+}
+</script>
 </head>
 <body>
+
+<!-- icon set (drawn for Mammoth) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 2.5l8 3v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10v-6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5" stroke-linecap="round"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path d="M4 20L20 4"/></symbol>
+    <symbol id="i-finger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6.5 7.5A7 7 0 0 1 19 11v2"/><path d="M5 11a7 7 0 0 0 .7 3"/><path d="M9 11a3 3 0 0 1 6 0v2.5a9 9 0 0 1-1.3 4.6"/><path d="M12 11v3a12 12 0 0 1-2.6 7"/><path d="M8.5 16.5a13 13 0 0 1-.8 2.5"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3L2 20.5h20L12 3z"/><path d="M12 10v4.5M12 17.5v.01" stroke-linecap="round"/></symbol>
+    <symbol id="i-chip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 16V11a6 6 0 0 1 9.5-4.9M18 11v5l2 2H6"/><path d="M10 21h4"/><path d="M3 3l18 18"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9.5"/><path d="M10 8.5v7M14 8.5v7"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6h.01M4 12h.01M4 18h.01" stroke-width="3"/></symbol>
+    <symbol id="i-save" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 17v3h16v-3"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/><path d="M3 3l18 18"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+    <symbol id="i-gauge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 18a9 9 0 1 1 16 0"/><path d="M12 14l4-5"/><circle cx="12" cy="14" r="1.2"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 20s-8-4.7-8-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 2.5C20 15.3 12 20 12 20z"/></symbol>
+    <symbol id="i-bug" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="7" y="8" width="10" height="12" rx="5"/><path d="M12 12v8M3 13h4M17 13h4M4 7l3 3M20 7l-3 3M5 20l2.5-2.5M19 20l-2.5-2.5M9 5.5l1.5 1.5M15 5.5L13.5 7"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3l2.7 5.6 6.1.8-4.4 4.3 1 6.1L12 17l-5.4 2.8 1-6.1L3.2 9.4l6.1-.8L12 3z"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 14l6-6 6 6"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+  </defs>
+</svg>
+
 <a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
+
+<header class="site-header" id="top">
   <div class="wrap nav">
-    <a class="brand" href="/" aria-label="Mammoth Blocker home">
-      <img src="/img/logo-192.png" alt="" width="44" height="44">
+    <a class="brand" href="./" aria-label="Mammoth Blocker home">
+      <img src="/logo-192.png" alt="" width="44" height="44">
       <span>Mammoth <b>Blocker</b></span>
     </a>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span></button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="/#features">Features</a></li>
-      <li><a href="/#blocked">What we block</a></li>
-      <li><a href="/#install">Install</a></li>
-      <li><a href="/#faq">FAQ</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#scam-check">Scam check</a></li>
+      <li><a href="#blocked">What we block</a></li>
+      <li><a href="#checker">Check a site</a></li>
+      <li><a href="#install">Install</a></li>
+      <li><a href="#faq">FAQ</a></li>
     </ul>
-    <a class="btn btn-primary" href="/#install">Get Mammoth</a>
+    <a class="btn btn-primary" href="#install" data-install>Get Mammoth</a>
   </div>
 </header>
-<main id="main" class="page">
-<div class="wrap">
-<div class="center">
-<img src="/img/logo-192.png" alt="" width="110" height="110" style="margin:0 auto 20px">
-<h1>Mammoth is on. You're protected.</h1>
-<p class="sub">Ads, trackers and scam networks are now blocked in this browser. Here's how to get the most out of it.</p>
-</div>
 
-<div class="grid grid-2" style="margin-top:12px">
-  <div class="card"><h3>1. Pin Mammoth</h3><p>Click the puzzle icon in your toolbar, then the pin next to Mammoth. Now it's always one click away.</p></div>
-  <div class="card"><h3>2. See what was blocked</h3><p>Click the Mammoth icon on any site to see how many requests were stopped and who tried.</p></div>
-  <div class="card"><h3>3. Check a page for scams</h3><p>Not sure about a site? Open the popup and click <b>Check this page for scam signs</b>.</p></div>
-  <div class="card"><h3>4. Fix a broken site</h3><p>If a site acts strange, switch Mammoth off for that site in the popup. It reloads and works as usual.</p></div>
-  <div class="card"><h3>5. Hide cookie banners</h3><p>Want fewer pop-ups? Turn on <b>Annoyances</b> in Mammoth's Options page.</p></div>
-  <div class="card"><h3>6. Keep your settings</h3><p>Moving computers? Use <b>Export settings</b> in Options, then import them on the new one.</p></div>
-</div>
+<main id="main">
 
-<div class="center" style="margin-top:48px">
-  <h2>Enjoying Mammoth?</h2>
-  <p style="color:var(--muted);margin:10px 0 22px">It's free and made by one person. A coffee or a GitHub star helps a lot.</p>
-  <p><a class="btn btn-primary" href="https://ko-fi.com/aznamammothblocker" rel="noopener">Support on Ko-fi</a>
-  &nbsp;<a class="btn btn-ghost" href="https://github.com/Azna-Nemati/mammoth-extension" rel="noopener">Star on GitHub</a></p>
-</div>
-</div>
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Block ads. Stop trackers. <span>Spot scams.</span></h1>
+      <p class="lead">Mammoth Blocker is a <b>free browser extension</b> that stops ads, trackers, fingerprinting and scam networks before they load — and checks any page for scam signs with one click. Everything runs on your device.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary btn-lg" id="heroInstall" href="#install" data-install>Get Mammoth — it's free</a>
+        <a class="btn btn-ghost btn-lg" href="#features">See features</a>
+      </div>
+      <div class="hero-note">
+        <span><svg><use href="#i-check"/></svg>No account</span>
+        <span><svg><use href="#i-check"/></svg>No data collected</span>
+        <span><svg><use href="#i-check"/></svg>Open source</span>
+      </div>
+      <div class="browsers" aria-label="Works on these browsers">
+        Works on
+        <span class="pill">Chrome</span><span class="pill">Firefox</span><span class="pill">Edge</span><span class="pill">Brave</span><span class="pill">Opera</span>
+      </div>
+    </div>
+
+    <div class="mock" aria-hidden="true">
+      <div class="mock-window">
+        <div class="mock-bar"><i></i><i></i><i></i><div class="mock-url">https://example-news-site.com/today</div><div class="mock-ext"><img src="/logo-192.png" alt=""><b>27</b></div></div>
+        <div class="mock-body">
+          <div>
+            <div class="mock-line h"></div>
+            <div class="mock-line"></div><div class="mock-line s"></div><div class="mock-line"></div>
+            <div class="mock-ad">Ad blocked by Mammoth</div>
+            <div class="mock-line"></div><div class="mock-line s"></div><div class="mock-line"></div><div class="mock-line s"></div>
+          </div>
+          <div class="mock-side"><div class="mock-ad">Tracker<br>blocked</div></div>
+        </div>
+      </div>
+      <div class="mock-pop">
+        <div class="t"><img src="/logo-192.png" alt="">Mammoth</div>
+        <div class="n">27</div>
+        <div class="l">Blocked on this page</div>
+        <div class="chips"><span>doubleclick.net</span><span>hotjar.com</span><span>criteo.com</span><span>taboola.com</span></div>
+        <div class="ok">✓ No scam signs found</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATS ================= -->
+<section class="stats" aria-label="Mammoth in numbers">
+  <div class="wrap stats-grid">
+    <div><div class="n" data-total>291</div><div class="l">blocking rules built in</div></div>
+    <div><div class="n">7</div><div class="l">categories you control</div></div>
+    <div><div class="n">0</div><div class="l">bytes of your data collected</div></div>
+    <div><div class="n">$0</div><div class="l">free, forever</div></div>
+  </div>
+</section>
+
+<!-- ================= FEATURES ================= -->
+<section class="section" id="features">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Why Mammoth</span>
+      <h2>Everything you need for a cleaner, safer web</h2>
+      <p>One small extension. No settings you have to learn. Turn it on and browse.</p>
+    </div>
+    <div class="grid grid-4">
+      <article class="card"><div class="ico"><svg><use href="#i-bolt"/></svg></div><h3>Faster pages</h3><p>Ads and trackers are stopped before they download, so pages load quicker and use less data.</p></article>
+      <article class="card"><div class="ico"><svg><use href="#i-eye"/></svg></div><h3>Stop trackers</h3><p>Blocks analytics beacons, session recorders and data brokers that follow you from site to site.</p></article>
+      <article class="card"><div class="ico"><svg><use href="#i-finger"/></svg></div><h3>Anti-fingerprinting</h3><p>Stops scripts built to identify your exact device, even when you clear cookies.</p></article>
+      <article class="card"><div class="ico red"><svg><use href="#i-alert"/></svg></div><h3>Scam check <span class="tag">New</span></h3><p>One click checks the page for fake virus alerts, gift-card demands and fake login forms.</p></article>
+      <article class="card"><div class="ico red"><svg><use href="#i-shield"/></svg></div><h3>Scam networks</h3><p>Blocks pop-under and push-bait networks known for deceptive and harmful ads.</p></article>
+      <article class="card"><div class="ico"><svg><use href="#i-chip"/></svg></div><h3>No cryptomining</h3><p>Stops hidden scripts that use your computer to mine coins and drain your battery.</p></article>
+      <article class="card"><div class="ico"><svg><use href="#i-bell"/></svg></div><h3>Fewer pop-ups</h3><p>Optional: hide cookie banners and "allow notifications?" nags with one switch.</p></article>
+      <article class="card"><div class="ico"><svg><use href="#i-pause"/></svg></div><h3>Pause per site</h3><p>Need a site to work as-is? Pause Mammoth there with one click. The page reloads by itself.</p></article>
+      <article class="card"><div class="ico"><svg><use href="#i-list"/></svg></div><h3>Your own blocklist</h3><p>Add any domain you never want to load again. It's blocked everywhere, on top of the built-in lists.</p></article>
+      <article class="card"><div class="ico"><svg><use href="#i-gauge"/></svg></div><h3>See what was blocked</h3><p>The popup shows how many requests were stopped on each page, and exactly who tried.</p></article>
+      <article class="card"><div class="ico"><svg><use href="#i-save"/></svg></div><h3>Backup &amp; restore</h3><p>Export your settings to a simple file and bring them to another computer in seconds.</p></article>
+      <article class="card"><div class="ico"><svg><use href="#i-user"/></svg></div><h3>No account, ever</h3><p>No sign-up, no email, no cloud. Your settings live only in your browser.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SCAM CHECK ================= -->
+<section class="section alt" id="scam-check">
+  <div class="wrap split">
+    <div>
+      <span class="kicker">New in 2.1</span>
+      <h2>Not sure about a page? Ask Mammoth.</h2>
+      <p>Open the Mammoth popup and click <b>Check this page for scam signs</b>. In a second you get a clear answer in plain words.</p>
+      <ul class="checks">
+        <li><svg><use href="#i-check"/></svg><span>Spots fake "your computer is infected" warnings and fake support phone numbers.</span></li>
+        <li><svg><use href="#i-check"/></svg><span>Warns about gift-card payments, seed-phrase requests and "act now" pressure.</span></li>
+        <li><svg><use href="#i-check"/></svg><span>Flags unsafe login forms and look-alike site names.</span></li>
+        <li><svg><use href="#i-check"/></svg><span>In Chrome, it can also ask the browser's built-in on-device AI for a second opinion.</span></li>
+        <li><svg><use href="#i-check"/></svg><span>Only runs when you click. The page never leaves your computer.</span></li>
+      </ul>
+      <a class="btn btn-green" href="#install" data-install>Get Mammoth</a>
+    </div>
+    <div class="split-media">
+      <div class="scam-card" role="img" aria-label="Example scam check result: this looks like a scam">
+        <div class="top"><img src="/logo-192.png" alt="">Page check</div>
+        <div class="url">http://secure-pc-help-alert.example/warning</div>
+        <div class="verdict"><i></i>This looks like a scam</div>
+        <ul>
+          <li>Says your device is infected. Websites can't know that.</li>
+          <li>Pushes you to call a "support" phone number.</li>
+          <li>Uses time pressure ("act now").</li>
+        </ul>
+        <div class="foot">Checked on your device. Nothing was sent anywhere.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+<section class="section" id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">How it works</span>
+      <h2>Up and running in three steps</h2>
+    </div>
+    <div class="grid grid-3 steps">
+      <div class="step"><div class="num">1</div><h3>Add it to your browser</h3><p>One click from your browser's store. No account and no setup.</p></div>
+      <div class="step"><div class="num">2</div><h3>Browse like normal</h3><p>Mammoth hands your browser a list of junk sites. The browser blocks them before they load.</p></div>
+      <div class="step"><div class="num">3</div><h3>Stay in control</h3><p>See what was blocked, pause any site, check pages for scams, and change any setting.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHAT WE BLOCK ================= -->
+<section class="section alt" id="blocked">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Open lists</span>
+      <h2>See exactly what Mammoth blocks</h2>
+      <p>No secret lists and no paid exceptions. Every domain is right here. Pick a category.</p>
+    </div>
+    <div class="tabs" role="tablist" id="catTabs" aria-label="Block categories"></div>
+    <div class="panel" role="tabpanel" id="catPanel" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ================= DOMAIN CHECKER ================= -->
+<section class="section" id="checker">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Try it</span>
+      <h2>Does Mammoth block this site?</h2>
+      <p>Type a domain or paste a link. The check runs in this page — nothing is sent anywhere.</p>
+    </div>
+    <div class="checker">
+      <form id="checkForm" autocomplete="off">
+        <label for="checkInput" class="skip">Domain to check</label>
+        <input id="checkInput" type="text" inputmode="url" placeholder="e.g. doubleclick.net or https://…" spellcheck="false">
+        <button class="btn btn-green" type="submit"><svg><use href="#i-search"/></svg>Check</button>
+      </form>
+      <div id="checkResult" aria-live="polite"></div>
+      <p class="try">Try:
+        <button type="button" data-try="google-analytics.com">google-analytics.com</button>
+        <button type="button" data-try="ads.pubmatic.com">ads.pubmatic.com</button>
+        <button type="button" data-try="wikipedia.org">wikipedia.org</button>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPARE ================= -->
+<section class="section alt" id="compare">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">The difference</span>
+      <h2>Built to be simple and honest</h2>
+    </div>
+    <div class="table-wrap">
+      <table class="compare">
+        <thead><tr><th scope="col">What you get</th><th scope="col" class="us">Mammoth Blocker</th><th scope="col">Many other blockers</th></tr></thead>
+        <tbody>
+          <tr><td>Free for everyone</td><td class="yes">Yes</td><td class="maybe">Often with paid tiers</td></tr>
+          <tr><td>Paid "acceptable ads" allowed through</td><td class="yes">Never</td><td class="maybe">Sometimes, by default</td></tr>
+          <tr><td>Account or email needed</td><td class="yes">No</td><td class="maybe">For some features</td></tr>
+          <tr><td>Collects usage data</td><td class="yes">No, none</td><td class="maybe">Varies</td></tr>
+          <tr><td>Scam check for any page</td><td class="yes">Yes, on your device</td><td class="maybe">Rarely</td></tr>
+          <tr><td>Full block lists visible to you</td><td class="yes">Yes, on this page</td><td class="maybe">Varies</td></tr>
+          <tr><td>Open source</td><td class="yes">Yes</td><td class="maybe">Varies</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fine">Mammoth uses built-in lists rather than huge downloaded filter lists, so it's light and easy to understand. Some sites may still show ads that come from the site itself.</p>
+  </div>
+</section>
+
+<!-- ================= INSTALL ================= -->
+<section class="section" id="install">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Install</span>
+      <h2>Get Mammoth for your browser</h2>
+      <p id="detectNote">Pick your browser below.</p>
+    </div>
+    <div class="tabs" role="tablist" id="installTabs" aria-label="Browsers">
+      <button class="tab" role="tab" data-b="chrome" aria-selected="true">Chrome</button>
+      <button class="tab" role="tab" data-b="edge" aria-selected="false">Edge</button>
+      <button class="tab" role="tab" data-b="brave" aria-selected="false">Brave &amp; Opera</button>
+      <button class="tab" role="tab" data-b="firefox" aria-selected="false">Firefox</button>
+      <button class="tab" role="tab" data-b="manual" aria-selected="false">Install by hand</button>
+    </div>
+    <div class="install-panel" role="tabpanel" id="installPanel" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section alt" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Help</span>
+      <h2>Frequently asked questions</h2>
+    </div>
+    <input class="faq-search" id="faqSearch" type="search" placeholder="Search the questions…" aria-label="Search the questions">
+    <div class="faq" id="faqList">
+      <details><summary>Is Mammoth Blocker really free?</summary><p>Yes. Every feature is free for everyone, and it will stay that way. There is no premium version. If you want to help, you can support it on Ko-fi, but nothing is locked behind it.</p></details>
+      <details><summary>Does Mammoth collect any of my data?</summary><p>No. Mammoth has no server, no account system and no analytics. Your settings and counts stay in your browser. Read the <a href="/privacy.html">privacy policy</a> for the details.</p></details>
+      <details><summary>How is Mammoth different from other ad blockers?</summary><p>Mammoth is small, simple and open. It never lets paid ads through, it shows you every domain it blocks, and it adds a scam check that runs on your device.</p></details>
+      <details><summary>Which browsers does it work on?</summary><p>Chrome, Microsoft Edge, Brave, Opera, Vivaldi and other Chrome-based browsers, plus Firefox (version 121 or newer) on desktop.</p></details>
+      <details><summary>How does the scam check work?</summary><p>When you click the button, Mammoth reads the page you're on and looks for common tricks with built-in rules. In Chrome, if your computer supports it, it also asks the browser's own on-device AI for a second opinion. The AI can add a warning but never remove one. Nothing is sent anywhere.</p></details>
+      <details><summary>A website looks broken. What do I do?</summary><p>Open the Mammoth popup and switch it off for that site. The page reloads and works like normal. You can also <a href="https://github.com/Azna-Nemati/mammoth-extension/issues">report the site</a> so we can fix it for everyone.</p></details>
+      <details><summary>Will it block ads on YouTube and social media?</summary><p>Mammoth blocks known ad and tracking networks everywhere, including social pixels. Some big sites serve ads from their own servers, and those can't always be blocked without breaking the site.</p></details>
+      <details><summary>Why is the "Annoyances" list off by default?</summary><p>It hides cookie banners and notification nags. That's great, but it can change how some pages look, so you decide. One switch in Options turns it on.</p></details>
+      <details><summary>Why does it ask for an extra permission to count?</summary><p>The popup shows what was blocked on the current page without any extra permission. A running total and a live number on the toolbar icon need one more browser permission, so that part is off until you turn it on.</p></details>
+      <details><summary>Will Mammoth slow down my computer?</summary><p>No. The browser does the blocking with its own built-in engine, and pages usually get faster because less junk downloads.</p></details>
+      <details><summary>Can I use it on my phone?</summary><p>Not yet. Mammoth is a desktop extension for now. Firefox for Android support is on the list.</p></details>
+      <details><summary>How do I remove it?</summary><p>Right-click the Mammoth icon in your toolbar and pick "Remove from Chrome" (or "Remove Extension" in Firefox). All its settings are deleted with it.</p></details>
+    </div>
+    <p class="faq-empty" id="faqEmpty" hidden>No question matches that. Try other words, or <a href="https://github.com/Azna-Nemati/mammoth-extension/issues">ask us on GitHub</a>.</p>
+  </div>
+</section>
+
+<!-- ================= SUPPORT ================= -->
+<section class="band" id="support">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Help Mammoth grow</h2>
+      <p>Mammoth is made by one person and supported by people like you.</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="card"><div class="ico"><svg><use href="#i-heart"/></svg></div><h3>Support it</h3><p>Buy a coffee to keep it free for everyone.</p><a class="link" href="https://ko-fi.com/aznamammothblocker" rel="noopener">Ko-fi →</a></div>
+      <div class="card"><div class="ico"><svg><use href="#i-bug"/></svg></div><h3>Report a broken site</h3><p>Tell us where something doesn't work right.</p><a class="link" href="https://github.com/Azna-Nemati/mammoth-extension/issues" rel="noopener">Open an issue →</a></div>
+      <div class="card"><div class="ico"><svg><use href="#i-plus"/></svg></div><h3>Suggest a tracker</h3><p>Found a tracker or scam network we miss? Send it in.</p><a class="link" href="https://github.com/Azna-Nemati/mammoth-extension/issues/new?title=Suggest%20a%20domain%3A%20" rel="noopener">Suggest one →</a></div>
+      <div class="card"><div class="ico"><svg><use href="#i-code"/></svg></div><h3>Read the code</h3><p>Every line is public. Check it, star it, share it.</p><a class="link" href="https://github.com/Azna-Nemati/mammoth-extension" rel="noopener">GitHub →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="cta">
+  <div class="wrap">
+    <img src="/logo-192.png" alt="" width="96" height="96">
+    <h2>Ready for a cleaner, safer web?</h2>
+    <p>Join the herd. Free, private and ready in one click.</p>
+    <a class="btn btn-primary btn-lg" href="#install" data-install>Get Mammoth — it's free</a>
+  </div>
+</section>
+
 </main>
+
 <footer class="site-footer">
   <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="./"><img src="/logo-192.png" alt="" width="44" height="44"><span>Mammoth <b>Blocker</b></span></a>
+        <p>A free, private ad blocker, tracker blocker and scam checker. No account. Nothing collected.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#scam-check">Scam check</a></li>
+          <li><a href="#blocked">Block lists</a></li>
+          <li><a href="#install">Install</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#checker">Check a site</a></li>
+          <li><a href="https://github.com/Azna-Nemati/mammoth-extension/issues">Report a problem</a></li>
+          <li><a href="/welcome.html">Getting started</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <ul>
+          <li><a href="https://github.com/Azna-Nemati/mammoth-extension">Source code</a></li>
+          <li><a href="https://ko-fi.com/aznamammothblocker">Support on Ko-fi</a></li>
+          <li><a href="/privacy.html">Privacy policy</a></li>
+        </ul>
+      </div>
+    </div>
     <div class="foot-bottom">
-      <span>© <span data-year>2026</span> Mammoth Blocker · <a href="/">Home</a> · <a href="/privacy/">Privacy</a> · <a href="https://github.com/Azna-Nemati/mammoth-extension">GitHub</a> · <a href="https://ko-fi.com/aznamammothblocker">Ko-fi</a></span>
+      <span>© <span data-year>2026</span> Mammoth Blocker. Free and open source.</span>
       <span>This site uses no cookies and no trackers.</span>
     </div>
   </div>
 </footer>
-<script src="/js/site.js"></script>
+
+<button class="to-top" id="toTop" aria-label="Back to top"><svg><use href="#i-up"/></svg></button>
+
+<script src="/blocklist.js"></script>
+<script src="/site.js"></script>
 </body>
 </html>
