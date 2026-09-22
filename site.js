@@ -5,7 +5,7 @@
 //  Every "Get Mammoth" button on the site updates by itself.
 // =====================================================================
 var STORE_LINKS = {
-  chrome:  "",   // e.g. https://chromewebstore.google.com/detail/mammoth-blocker/<id>
+  chrome:  "https://chromewebstore.google.com/detail/mammoth-blocker/gmgoffbjajmljpafilgnaefbpbagkpln",   
   firefox: "",   // e.g. https://addons.mozilla.org/firefox/addon/mammoth-blocker/
   edge:    ""    // e.g. https://microsoftedge.microsoft.com/addons/detail/<id>
 };
