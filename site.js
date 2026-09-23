@@ -5,7 +5,7 @@
 //  Every "Get Mammoth" button on the site updates by itself.
 // =====================================================================
 var STORE_LINKS = {
-  chrome:  "https://chromewebstore.google.com/detail/mammoth-blocker/gmgoffbjajmljpafilgnaefbpbagkpln",   
+  chrome:  "https://chromewebstore.google.com/detail/mammoth-blocker/gmgoffbjajmljpafilgnaefbpbagkpln",
   firefox: "",   // e.g. https://addons.mozilla.org/firefox/addon/mammoth-blocker/
   edge:    ""    // e.g. https://microsoftedge.microsoft.com/addons/detail/<id>
 };
@@ -66,18 +66,33 @@ var DOWNLOADS = {
     return "";
   }
 
+  // Official browser icons live next to index.html (chrome.svg, firefox.svg, ...).
+  function iconFor(b) { return b === "brave" ? (browserName === "Opera" ? "opera" : "brave") : b; }
+  function storeButton(a, b, name, suffix) {
+    a.classList.remove("btn-primary", "btn-green");
+    a.classList.add("btn-store", b);
+    a.textContent = "";
+    var img = document.createElement("img");
+    var icon = iconFor(b);
+    img.src = "/" + icon + (icon === "chrome" ? ".svg" : ".png");
+    img.alt = "";
+    img.onerror = function () { img.remove(); };
+    a.appendChild(img);
+    a.appendChild(document.createTextNode("Add to " + name + (suffix || "")));
+  }
+
   // Point every "Get Mammoth" button straight at the store when it's live.
   var direct = !isMobile && storeFor(browser);
   $$("[data-install]").forEach(function (a) {
     if (!direct) return;
     a.href = direct;
     a.rel = "noopener";
-    if (a.id === "heroInstall") a.textContent = "Add to " + browserName + " — it's free";
+    if (a.id === "heroInstall") storeButton(a, browser, browserName, " — it's free");
   });
 
   // ---------- install guide ----------
   var STORE_NAMES = { chrome: "Chrome Web Store", edge: "Edge Add-ons", brave: "Chrome Web Store", firefox: "Firefox Add-ons" };
-  var LABELS = { chrome: "Chrome", edge: "Edge", brave: "Brave or Opera", firefox: "Firefox" };
+  var LABELS = { chrome: "Chrome", edge: "Edge", brave: browserName === "Opera" ? "Opera" : "Brave", firefox: "Firefox" };
 
   function storePanel(b) {
     var link = storeFor(b);
@@ -89,7 +104,7 @@ var DOWNLOADS = {
         '<li>Click <b>Add</b> (or <b>Get</b>), then confirm.</li>' +
         '<li>Click the puzzle icon in your toolbar and pin <b>Mammoth</b> so it\'s always one click away.</li>' +
         '</ol>' +
-        '<div class="row"><a class="btn btn-primary btn-lg" href="' + esc(link) + '" rel="noopener">Add to ' + esc(name) + '</a></div>';
+        '<div class="row"><a class="btn btn-lg" id="panelStore" href="' + esc(link) + '" rel="noopener"></a></div>';
     }
     return '<span class="status">⏳ Waiting for store approval</span>' +
       '<p style="margin-top:16px">Mammoth is being reviewed by the ' + esc(STORE_NAMES[b]) + '. The button will appear here the day it\'s approved. ' +
@@ -123,6 +138,8 @@ var DOWNLOADS = {
     if (!installTabs) return;
     $$(".tab", installTabs).forEach(function (t) { t.setAttribute("aria-selected", String(t.dataset.b === b)); });
     installPanel.innerHTML = b === "manual" ? manualPanel() : storePanel(b);
+    var ps = document.getElementById("panelStore");
+    if (ps) storeButton(ps, b, LABELS[b]);
     $$("[data-goto]", installPanel).forEach(function (btn) {
       btn.addEventListener("click", function () { showInstall(btn.dataset.goto); });
     });
