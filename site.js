@@ -6,7 +6,7 @@
 // =====================================================================
 var STORE_LINKS = {
   chrome:  "https://chromewebstore.google.com/detail/mammoth-blocker/gmgoffbjajmljpafilgnaefbpbagkpln",
-  firefox: "",   // e.g. https://addons.mozilla.org/firefox/addon/mammoth-blocker/
+  firefox: "https://addons.mozilla.org/firefox/addon/mammoth-blocker/",
   edge:    ""    // e.g. https://microsoftedge.microsoft.com/addons/detail/<id>
 };
 // Where people download the extension to install it by hand (GitHub release zips).
